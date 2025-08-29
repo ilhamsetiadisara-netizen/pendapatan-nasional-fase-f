@@ -1,0 +1,34 @@
+# Kalkulator Pendapatan Nasional (Metode Pengeluaran)
+print("=== Kalkulator Pendapatan Nasional (Metode Pengeluaran) ===")
+print("Rumus: Y = C + I + G + (X - M)")
+print()
+
+try:
+    # Input data dari pengguna
+    C = float(input("Masukkan Konsumsi (C): "))
+    I = float(input("Masukkan Investasi (I): "))
+    G = float(input("Masukkan Pengeluaran Pemerintah (G): "))
+    X = float(input("Masukkan Ekspor (X): "))
+    M = float(input("Masukkan Impor (M): "))
+    
+    # Hitung Pendapatan Nasional
+    Y = C + I + G + (X - M)
+    
+    # Tampilkan hasil dengan format yang lebih baik
+    print("\n" + "="*50)
+    print("HASIL PERHITUNGAN PENDAPATAN NASIONAL")
+    print("="*50)
+    print(f"Konsumsi (C) \t\t: {C:,.2f}")
+    print(f"Investasi (I) \t\t: {I:,.2f}")
+    print(f"Pengeluaran Pemerintah (G) : {G:,.2f}")
+    print(f"Ekspor (X) \t\t: {X:,.2f}")
+    print(f"Impor (M) \t\t: {M:,.2f}")
+    print(f"Ekspor Neto (X - M) \t: {(X - M):,.2f}")
+    print("-" * 50)
+    print(f"Pendapatan Nasional (Y) \t: {Y:,.2f}")
+    print("="*50)
+    
+except ValueError:
+    print("Error: Masukkan harus berupa angka!")
+except Exception as e:
+    print(f"Terjadi kesalahan: {e}")
